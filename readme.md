@@ -29,7 +29,7 @@ Called to determine if `f.args.arr[f.args.i]` should be included in the filtered
 
 Called to copy or transform `f.args.arr[f.args.i]`. This callback is required for `func_filter` and `func_map`, however when used with `func_filter`, it's only responsibility should be copying.
 
-### f.derefInput
+#### f.derefInput
 
 Required by `func_find` to dereference the correct element of `f.args.arr`.
 
@@ -49,7 +49,7 @@ Iteration index used to iterate over `args.arr` where `args.i < args.n`.
 
 Total length of `arg.arr`. After running, this will be changed to the length of `args.storage`
 
-### f.args.offset
+#### f.args.offset
 
 When filtering, `args.i` increments to cover all of `args.arr`, but `arr.storage` may contain fewer items. Therefore, the callback responsible for copying when filtering (`f.map`) may need to account for this difference (see `example.c`).
 
